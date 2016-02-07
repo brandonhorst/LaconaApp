@@ -21,6 +21,7 @@
 - The "shutdown" command is now functional
 - The "eject all" command is now functional
 - Plug a memory leak with Spotlight queries
+
 ---
 
 # Public Beta 2 (0.3.1)
