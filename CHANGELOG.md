@@ -1,3 +1,12 @@
+# Public Beta 5 (0.4.2)
+
+## Fixes
+
+- Fixed a bug where "open lacona.io and <...>" would sort before "open lacona.io"
+- Reverted a broken implementation of "call/email/text/facetime" to 0.4 version
+
+---
+
 # Public Beta 4 (0.4.1)
 
 ## Fixes
