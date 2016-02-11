@@ -1,3 +1,28 @@
+# Public Beta 4 (0.4.1)
+
+## Fixes
+
+- Lacona would previously ignore some applications/bookmarks if you had more than 100
+- In version 0.4, Lacona could not open Apps/Pref Panes/Volumes and Files/URLs in the same command - now it can again
+- Auto-update library (Sparkle) updated to version 1.13.1, to fix [a recently-discovered security vulnerability](https://github.com/sparkle-project/Sparkle/releases/tag/1.13.1).
+
+## Changes
+
+- If running outside of the Applications directory, Lacona will ask to move itself. Outside of the Applications directory, OSX does not allow apps to access Contacts, Calendar, etc...
+- Lacona now differentiates between "files" and "folders".
+- Lacona can now open Applications that live outside the /Applications directory. To limit clutter, it is limited to these directories: 
+  * `/Applications` - System, App Store, and normal Apps
+  * `/Applications/Xcode.app/Contents/Applications` - Developer utilities, if Xcode is installed
+  * `/System/Library/CoreServices/Applications` - System utilities
+  * `~/Applications` - Chrome Apps, among other things
+  * `/usr/local/Cellar` - Apps installed via Homebrew
+  * `/opt/homebrew-cask/Caskroom` - Apps installed via Homebrew Cask
+  * `Finder.app`
+- In the "open" command, Applications and Preference panes will always appear above files, even if the beginning of the name is not matched.
+- File searching performance improved dramatically.
+
+---
+
 # Public Beta 3 (0.4)
 
 ## New Features
