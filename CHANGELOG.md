@@ -1,3 +1,26 @@
+# Public Beta 6 (0.5)
+
+## New Features
+
+- Added the Lacona Preferences Page
+- Added the ability to manage the list of directories to search for applications
+- Added the ability to customize Lacona's search engines
+- Added the ability to hide the menubar icon
+- While Lacona is open, pressing ⌘q quits it
+- While Lacona is open, pressing ⌘, now opens the Preferences
+
+## Fixes
+
+- Fix a bug where iTunes songs missing some info could result in 'play undefined' being a valid command
+- Fix a bug where using a quotation mark in an "open" command would crash Lacona
+- Allow Lacona to find files whose names have diacritical marks in them
+- "schedule x next Friday to Sunday" would previously fail
+- Fix a bug which could cause crashes on startup if launched outside /Applications more than once
+- Fix a bug that would result in executing the wrong command if the user typed and pressed enter very quickly
+- Removed some unnecessary files from Resources
+
+---
+
 # Public Beta 5 (0.4.2)
 
 ## Fixes
