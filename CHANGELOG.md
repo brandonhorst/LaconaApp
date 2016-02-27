@@ -6,8 +6,8 @@
 - Added the ability to manage the list of directories to search for applications
 - Added the ability to customize Lacona's search engines
 - Added the ability to hide the menubar icon
-- While Lacona is open, pressing &#8984;q quits it
-- While Lacona is open, pressing &#8984;, now opens the Preferences
+- While Lacona is open, pressing Command+q quits it
+- While Lacona is open, pressing Command+, now opens the Preferences
 
 ## Fixes
 
