@@ -1,3 +1,23 @@
+# Public Beta 7 (0.6)
+
+## New Features
+
+- Added the ability to start Facetime Audio calls
+
+## Fixes
+
+- Do not hijack modifier+arrow key combinations (like Command+Left)
+- Changes to Applications settings will now take effect immediately
+- Fix a bug with opening "~/*" files
+- Fix a crash when typing quotation marks
+
+## Changes
+
+- Reworked everything under-the-hood using [elliptical](http://elliptical.laconalabs.com/), for improved performance and (future) extensibility
+- Cleaned up the language for making calls, texts, emails, facetime calls, and facetime audio calls
+- Changed the colorization of "time of day" and "folder"
+- Due to under-the-hood changes, nothing works when running outside of the Applications directory
+
 # Public Beta 6 (0.5)
 
 ## New Features
