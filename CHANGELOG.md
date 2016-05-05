@@ -1,3 +1,23 @@
+# Public Beta 8 (0.7.0)
+
+## New Features
+
+- Added the "open Lacona Preferences" command (this does the same thing as CMD+,)
+- Added support for "qualifiers" - a way of unambiguously specifying ambiguous commands. Try the `call` command for a contact with multiple phone numbers.
+- The `open` command can now open Contacts, which will open in the Contacts application
+
+## Fixes
+
+- Fix a bug where entering an empty string on the settings page could revert data to the defaults
+- Fix a bug where "search <engine> for <query>" was not ignoring the word "for"
+- Fix two separate bugs that resulted in certain commands were not presenting all available options
+- Relationship-Name linking was made much more robust, so it now accepts names with spaces in them
+- You can no longer open multiple preference panes with a single command (which never worked to begin with)
+
+## Changes
+
+- Improve text rendering quality on some systems
+
 # Public Beta 7 (0.6)
 
 ## New Features
