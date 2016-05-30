@@ -1,3 +1,9 @@
+# Public Beta 10 (0.8.1)
+
+## Fixes
+
+- Fix a bug that would cause silent failures if the user had never used Lacona before
+
 # Public Beta 9 (0.8.0)
 
 ## New Features
