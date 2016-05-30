@@ -1,3 +1,15 @@
+# Public Beta 9 (0.8.0)
+
+## New Features
+
+- Add limited support for developer addons
+- Add the "reload addons" Applescript command
+
+## Fixes
+
+- Fix a bug with "toggle Do Not Disturb"
+- Fix a display bug visible on Retina displays
+
 # Public Beta 8 (0.7.0)
 
 ## New Features
