@@ -1,3 +1,26 @@
+# Public Beta 11 (0.9.0)
+
+## New Features
+
+- Lacona can now quit menu bar apps
+- Added the `relaunch` command (works with Dock and Menu Bar apps)
+- API: Addons can now use `callNode` to make calls out to Node js, where they can use Node modules like `fs` and `https`.
+
+## Changes
+
+- Show all entries for certain commands before any characters have been input (eject, switch to, quit)
+- Add `activate` as a synonym for `switch to`
+- Enable fuzzy matching for many more commands
+- Visual: Slightly decrease shadow
+- API: Split File and Directory into two distinct phrases (rather than File encompassing both)
+- API: RunningApplication results have a new property: `activiationPolicy`, either "regular", "accessory", or "prohibited"
+
+## Fixes
+
+- Fix a bug that could clear command settings with every relaunch
+- Fix a bug where RunningApplications, Contacts, and Volumes would not be updated if they changed after Lacona launch
+- API: Fix a bug with `quitApplication` not calling the callback
+
 # Public Beta 10 (0.8.1)
 
 ## Fixes
