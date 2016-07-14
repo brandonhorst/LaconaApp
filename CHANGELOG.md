@@ -1,3 +1,40 @@
+# Public Beta 12 (0.10.0)
+
+## New Features
+
+- Add the ability to download and install addons published to npm. Check out the [documentation for writing your own addons!](https://docs.lacona.io).
+- Introduce small icons for certain features (Apps, Contacts, Bookmarks, Preference Panes, Contacts)
+- Add the Calculate command, which can do basic arithmetic and unit conversions. For a list of features, see [MathJS](http://mathjs.org/). Results appear in a popover window.
+- Add the Define command, which looks up words in the system dictionary. Currently, only the Oxford English Dictionary is supported.
+- Add commands to Move, Delete, Copy, and Reveal files and folders (thank you to @rltbennett)
+- Added a fallthrough for Calculate
+- You can now open Apps using some common alternative names (e.g. Chrome -> Google Chrome, iMessage -> Messages). If there are more apps with alternative names that are not supported, please [submit an issue](https://github.com/laconalabs/LaconaApp/issues).
+- Introduce the ability to open Volumes
+- Add qualifiers to relationships, both by label (my brother (Mobile)) and by name (my brother (Aaron))
+- Add a small introductory popover on first launch, explaining how to open the Lacona bar and preferences
+- Opening Lacona from Finder or the Dock will now bring up the Lacona bar
+- You can now toggle multiple settings with the same command ("turn off wifi and bluetooth")
+- The Mute and Do Not Disturb commands now support a time duration ("mute for 10 minutes")
+
+## Changes
+
+- Switch the underlying API to use Node.js instead of JavascriptCore. Improved performance for all commands. May require addon changes.
+- Switched `lacona-api` to use Promises and Observables more consistently - may require addon changes.
+- Updated the underlying elliptical engine, which has a few minor changes to better support qualifiers and annotations. May require addon changes.
+- Shrank the text and simplified the visual style to allow popover previews and icons to better fit with the flow of content
+- The Keyboard Shortcut can no longer be set to to Shift+[Letter/Number/Punctuation], as those are normal typing characters. 
+- Add a brief description to the Keyboard Shortcut setting
+- Change the Preferences styling to fit more in line with OSX
+- Remove the Right Click menu from Preferences and Lacona Options
+- Changed the way that Preferences are saved on disk
+- Switched to using Service Management for Launch at Login functionality
+
+## Fixes
+
+- Fix a crash when adding an invalid Application name to Applications
+- Fix a bug when attempting to remove certain settings that have defaults.
+- Relationships will now work even if the name has diacritical marks.
+
 # Public Beta 11 (0.9.0)
 
 ## New Features
