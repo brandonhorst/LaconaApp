@@ -1,3 +1,20 @@
+# Public Beta 13 (0.10.1)
+
+## Fixes
+
+- Fix a bug that could cause crashes if some running applications did not have bundle identifiers
+- Fix a bug with activating and quitting running applications with whitespace in their titles
+- The lacona addon log will now be appended to rather than overwritten with each error, making addon development easier
+- Fix the `lock computer` command
+- Ensure that the website link appears for addons that are not yet installed
+- Ensure that author name appears for addons that have been installed
+- Fix a bug that could result in Lacona not launching properly if certain Network devices were disabled or the hosts file was configured strangely
+- Installation and Uninstallation failures will now be reported as alerts, so there is no need to search through the console logs
+- The "Check for Updates" button on the Addons will be re-enabled if errors occur
+- Fix a crash that could occur if attempting to install multiple addons at the same time
+- Fix an issue that could get an node_modules into an inconsistent state if multiple addons were installed and uninstalled at the same time
+- Vertically center the keyboard hints on the right side of options, could potentially fix a display bug on some external monitors
+
 # Public Beta 12 (0.10.0)
 
 ## New Features
