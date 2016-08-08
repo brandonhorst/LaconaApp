@@ -36,6 +36,7 @@
 - Fix a bug that did not allow "schedule x from today to tomorrow"
 - Force Lacona's built-in NPM tool to use `~/.lacona-npm` as the cache directory, rather than the default `~/.npm`. This fixes some situations where pre-existing npm permissions issues could cause Addon installation/uninstallation failures for Lacona. Also, prevent other undesired interactions with npm config files.
 - Fix a potential crash when editing theme settings for the first time.
+- Fix a regression that ignored the "Applications" setting - so default setting users could not open Finder.
 
 # Public Beta 13 (0.10.1)
 
