@@ -1,3 +1,42 @@
+# 1.0.0
+
+## New Features
+
+- Payment is now enabled. All built-in commands are free to use forever. Running commands from Addons will have a slight delay and prompt for purchase. Once purchase has been validated, these messages will go away.
+- Add the "Shortcuts" section to config, which allows two new feature: Aliases and Prefixes.
+    - Aliases are user-defined ways to cut down on typing. They are replacements that can replace either the beginning of commands ('o safari' -> 'open safari') or entire commands ('twifi' -> 'toggle wifi for 1 second')
+    - Prefixes have always existed - they are the commands that are selected by default if you do not enter a verb ('safari' -> 'open safari'). Now, they are user-configurable. There are 4 by default: 'open', 'search', 'look up', and 'calculate'.
+- Add "Large Fonts" theme, which increases the font size (to pre-0.10.0 size). Very useful on large monitors
+- You can now specify a Reminder List for the "remind me to" command, and a Calendar for the "schedule" command. Additionally, added the alternate "add milk to shopping list" syntax, which is a synonym for "remind me to".
+
+## Changes
+
+- Dramatic performance improvements across the board, especially for fallthrough, files, and dates
+- Style changes and continued simplifications, to better fit into the larger macOS environment
+- Calculate now does math asyncronously, which improves fallthrough performance, especially for searching.
+- Add links to the [Terms of Use](https://www.lacona.io/terms) and [Privacy Policy](https://www.lacona.io/privacy) to the About page.
+- Ignore starting spaces and multiple spaces
+- "Define" is now only available for dictionary words - it will not do automatic truncation/adjustment
+- "Look up" is now a synonym for "define"
+- Add "look up" as a fallthrough (user-configurable)
+- Applications now have qualifiers, which fixes problems if you have multiple applications in different directories with the same name
+- Allow the word form of numbers to be used in dates ("remind me to eat in an hour", "schedule party for march first")
+- Increase the transparency of inactive modifiers in the Keyboard Shortcut setting
+- "Eject <Volume>" and "eject all" will now show a notification on success or failure
+- Change the color of the "reminder title" argument, so it does not blend in with dates and times
+- Hide the "disable/enable" button while uninstalling addons.
+- Scheduling all-day events now creates an alarm at 9am the day before the event, rather than 11:45pm the day before.
+- Make the initial tutorial popover less ugly.
+
+## Fixes
+
+- Fix a bug that could cause options and the preview popover to become invisble, but their shadow to persist
+- Fix "open Lacona Preferences"
+- Reminders created with lacona will now display their due date in the iOS Reminders App
+- Fix a bug that did not allow "schedule x from today to tomorrow"
+- Force Lacona's built-in NPM tool to use `~/.lacona-npm` as the cache directory, rather than the default `~/.npm`. This fixes some situations where pre-existing npm permissions issues could cause Addon installation/uninstallation failures for Lacona. Also, prevent other undesired interactions with npm config files.
+- Fix a potential crash when editing theme settings for the first time.
+
 # Public Beta 13 (0.10.1)
 
 ## Fixes
