@@ -1,3 +1,17 @@
+# 1.0.1
+
+## New Features
+
+- Add a small activity indicator to the Addons page
+
+## Changes
+
+- Minor text changes
+
+## Fixes
+
+- Make the Preferences page functional on macOS 10.12 Sierra
+
 # 1.0.0
 
 ## New Features
