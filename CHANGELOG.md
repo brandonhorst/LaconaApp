@@ -1,3 +1,26 @@
+# 1.0.2
+
+## Changes
+
+- `lacona-cli@1.1.0` adds the concept of "Developer Mode". Using `lacona dev package-name`, you can set a single addon to be in "Developer Mode", which means that the delay and license prompt will not happen, even for unlicensed users. This will make addon development a bit easier for people seeking scholarships.
+- Built-in Commands and Addons can now be [translated](http://docs.lacona.io/docs/advanced/translation.html) (no translations are currently available, but they will come with time)
+- If any of the built-in commands are installed using [`lacona-cli`](https://www.npmjs.com/package/lacona-cli), that will supercede the built-in version. This allows developers to test fixes and translations of these commands. The built-in commands are
+  - [lacona-calculate](https://github.com/laconalabs/lacona-calculate)
+  - [lacona-command](https://github.com/laconalabs/lacona-command)
+  - [lacona-communicate](https://github.com/laconalabs/lacona-communicate)
+  - [lacona-events](https://github.com/laconalabs/lacona-events)
+  - [lacona-finder](https://github.com/laconalabs/lacona-finder)
+  - [lacona-itunes](https://github.com/laconalabs/lacona-itunes)
+  - [lacona-osx](https://github.com/laconalabs/lacona-osx)
+  - [lacona-search-internet](https://github.com/laconalabs/lacona-search-internet)
+  - [lacona-settings](https://github.com/laconalabs/lacona-settings)
+  - [lacona-translate](https://github.com/laconalabs/lacona-translate)
+
+## Fixes
+
+- Fix a bug with pressing the down arrow to navigate lists in the Preferences
+- Fix a bug where multiple lists could be selected at the same time in the Preferences
+
 # 1.0.1
 
 ## New Features
