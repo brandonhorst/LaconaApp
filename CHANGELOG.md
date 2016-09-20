@@ -1,3 +1,20 @@
+# 1.0.3
+
+## Changes
+
+- Lacona will now appear in the Dock while the Preferences window is open, allowing for improved window management.
+- Clicking the Dock icon while the Preferences window is open will no longer make the Lacona Input Bar appear.
+- "search google for lacona" will now present one option instead of two.
+
+## Fixes
+
+- Fix a bug where pressing "Purchase Lacona..." while the purchase sheet was already active would cause bad behavior and crashes.
+
+## Developer Changes
+
+- Introduced `fetchUserDefaults` to `lacona-api`
+- Addons can now extend the `elliptical-*` classes, so extensions can now provide Dates, URLs, Email Addresses, Strings, and more.
+
 # 1.0.2
 
 ## Changes
