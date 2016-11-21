@@ -1,3 +1,55 @@
+# 1.1.0
+
+## New Features
+
+- Major revamp of Preferences. Icons make things look better, and all addons and built-in commands show Examples of how they are used. Revamped the License page, added tabs, and array preferences now show up in sheets.
+- Added the ability to conditionally enable built-in features via Preferences. Disabling features that you do not need may improve performance.
+- Added "Context" support - Lacona is now aware of the current clipboard contents, and the current Finder window (if it is foremost). This means that commands like "email clipboard contents to Vicky" are now possible. Or, with the `lacona-shell` Addon, "run rm -rf * in {current finder directory} is now very easy". This works for URLs, Files, Directories, and text on the clipboard. This can be disabled from 'macOS Integration' in Preferences.
+- You can now now specify your "Quick Select Modifier", which allows you to select which modifier key you use to pick an option by number. Previously, it was always set to `alt`.
+- Added a one-time popup prompting for Contacts, Reminders, and Events access. If the user clicks no, the functions will automatically be disabled in settings.
+- If Contacts, Reminders, and Events access are not permitted, they will automatically be disabled in the Preferences as well.
+- The 'reveal in Finder' command can now reveal Applications and Volumes (not just files).
+- You can now install Addons by clicking a link from any application. Links in the form [`lacona-install://lacona-convert-currency`](lacona-install://lacona-convert-currency) will pop up an alert asking you to confirm installation. If confirmed, the Addon will automatically install. This only works for published Lacona Addons.
+- Check out the "GitHub" and "IFTTT" addons!
+
+## Changes
+
+- Massive performance improvements, especially for users who have a lot of Contacts. On our test system, performance for the `open` command and all fallthroughs was increased about eightfold.
+- Fetch some data at load time, increasing performance the very first time Lacona is called up after a restart.
+- Small change to the way that Command Aliases work. If the alias matches the input exactly, the full replacement will be used. Now, you can shorten long, commonly used commands that do not require arguments, such as "open twitter.com in Safari".
+- Lacona now understands 24-hour time.
+- Lacona now understands dates like "July 4-5", "3-5pm", and "the 25th".
+- Lacona now makes its understanding of dates a bit more explicit, by automatically adding components like "at", "on", and ":00".
+- Whack 17MB off the application size with minification/deduplication. Note that the majority of the large file size comes from bundling Node.js, which is required for functioning.
+- IPC with the Node process no longer goes through the network adaptor. This improves performance, and also remove the annoying "Allow Incoming Connections" message that occassionally appeared on Startup.
+- Add some attributions to the About page.
+- "Play next song" and kin are now properly identified as symbols.
+- Songs in iTunes shows the iTunes logo.
+- Safari bookmarks now use the Safari logo
+- Do not show duplicate options that represent the same thing ('open Chrome' and 'open Google Chrome')
+- Prevent some nonsense inputs ('open Google Chrome and Chrome')
+
+## Fixes
+
+- The "Please Purchase Lacona Pro" popup and the tutorial popup will now both appear even if the Menu Bar Icon is hidden.
+- Fix a bug that was causing the "Please Purchase Lacona" popup/delay to happen for some system commands.
+- Fix "enable/disable Dark Mode" on OSX Sierra
+- Selecting options using the mouse now works all the time. Due to an macOS Quirk, this has the unfortunate side-effect of making the cursor always be the normal (rather than having the text and pointer cursors). Not a huge problem, though.
+
+## Developer Changes
+
+- Update underlying node.js to v7.0.0
+- Botched addons will no longer break everything. Addons with errors in user-defined code will simply print messages to the log file and Lacona will continue behaving as normal. If your addon is not working, try running `lacona logs`.
+- Preferences are now stored in `preferences.json` rather than `config.json`, and they should not include a top wrapper object. This is because preferences are now Addon-specific (Addons cannot access other Addon's config).
+- The `auth` type was added to preferences, allowing oauth2-based authentication, straight from Preferences.
+- Addons can now specify `examples` in the `lacona` property of `package.json`.
+- Addons can now set their own preferences programmatically using the `setConfig` function.
+- Addons can now export a `hooks` object, which contains functions that are called at various times. Currently, the `onLoad`, `onLoadConfig`, and `onURLCommand` hooks are available. The latter two hooks are passed `observe`, `config`, and `setConfig`, so they can prefetch sources, modify config settings, and respond to URL commands if necessary.
+- Beefed up `setClipboard` and `fetchClipboard` - they can now handle files, URLs, and multiple strings.
+- The `image` type is now available for annotations, allowing Addons to specify annotations with an absolute file path to an image file.
+- The `url` type is now available for annotations, allowing Addons to specify annotations with an http[s] path to an image file.
+- Introduced the `symbol` category, which italicizes the words. This demonstrates to the user that the given input is a symbol of some sort.
+
 # 1.0.3
 
 ## Changes
