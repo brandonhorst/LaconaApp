@@ -1,3 +1,9 @@
+# 1.1.1
+
+## Fixes
+
+- Fix a bug that only allowed one "Shortcut" to be changed from the default at a time.
+
 # 1.1.0
 
 ## New Features
