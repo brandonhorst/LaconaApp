@@ -1,3 +1,11 @@
+# 1.1.2
+
+## Fixes
+
+- Fix a bug that would reset certain preferences on startup, for users upgrading from Lacona 1.0.x
+- Fix a bug that could cause the "Tutorial" popover to not appear on first launch
+- Fix the ordering of dialogs presented to the user on first launch
+
 # 1.1.1
 
 ## Fixes
