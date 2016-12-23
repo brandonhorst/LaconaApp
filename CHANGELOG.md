@@ -1,3 +1,16 @@
+# 1.1.3
+
+## Changes
+
+- "Launch at Login" is no longer be enabled by default, to comply with [Setapp](https://setapp.com/) guidelines. Users who have already set the setting manually will not be affected
+
+## Fixes
+
+- Fix a bug that prevented Launch at Login from working
+- Fix a bug that could cause slowdowns if Spotlight returns inconsistent results
+- Fix a bug that caused share sheets to appear in the wrong place on Retina displays
+- Update the About text to reflect the switch to node v7.0.0
+
 # 1.1.2
 
 ## Fixes
