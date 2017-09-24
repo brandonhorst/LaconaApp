@@ -1,3 +1,14 @@
+# 1.1.4
+
+## Changes
+
+- Update Setapp, Sparkle, and Paddle frameworks
+- Remove Safari Bookmarks, as searching bookmarks is no longer supported on macOS 10.13 High Sierra
+
+## Fixes
+
+- Update to work with macOS 10.13 High Sierra
+
 # 1.1.3
 
 ## Changes
